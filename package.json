@@ -5,8 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "start": "node --env-file=.env src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon --env-file=.env src/index.js"
   },
   "keywords": [
     "javascript",
@@ -19,6 +20,9 @@
     "nodemon": "^3.0.2"
   },
   "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.4",
     "prettier": "^3.2.1"
   }
 }
