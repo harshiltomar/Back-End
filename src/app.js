@@ -24,4 +24,11 @@ app.use(express.static("public"));
 //cookieParser simple allows to access server to user browser cookies to perform CRUD operations
 app.use(cookieParser());
 
+//routes import with segregation
+import userRouter from "./routes/user.routes.js";
+
+//routes declaration
+// the users is a prefix route
+app.use("api/v1/users", userRouter);
+
 export { app };
